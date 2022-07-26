@@ -1,0 +1,187 @@
+@import url('http://fonts.cdnfonts.com/css/super-mario-world-text-box');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(163, 112, 2, 0.76);
+}
+
+.startGame {
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    background: linear-gradient(#addff3, #e0f6ff);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: 'Super Mario World Text Box', sans-serif;
+    color: #000;
+    cursor: pointer;
+}
+
+.startGame:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+#fim p {
+    color: white;
+    margin: -95px;
+    font-family: 'Super Mario World Text Box', sans-serif;
+    font-size: 12px;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 9px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 700ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 350px;
+    margin-top: 5px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.inicio {
+	width:350px;
+	height:250px;
+	background-color:linear-gradient(#0fb1f1, #e0f6ff);
+ 	margin-left:auto;
+	margin-right:auto;
+ 	margin-top:100px;
+	text-align:center;
+	padding:10px;
+
+}
+
+#fim {
+    width: 50%; 
+    height: 60%;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.marioLogo {
+    width: 200px;
+}
+
+.marioImg {
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 10px;
+}
+
+.gameOverImg {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 10px;
+}
+
+#reinicia {
+    border: 1px solid #f8c000;
+    border-radius: 7px;
+    background: #000;
+    padding: 10px;
+    margin-top: 115px;
+    font-size: 13px;
+    font-family: 'Super Mario World Text Box', sans-serif;
+    color: #f8c000;
+    cursor: pointer;
+}
+
+#reinicia:hover {
+   color: #000;
+   background-color: #f8c000;
+   transition: all .5s;
+}
+
+#scoreboard {
+    position: absolute;
+    width: 130px;
+    height: 30px;
+    margin: 7px;
+    margin-left: 20px;
+    margin-top: 15px;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #f8c000;
+    box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+#scoreboard p {
+    font-size: 12px;
+    font-family: 'Super Mario World Text Box', sans-serif;
+    text-align: center;
+    margin-top: 6px;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -350px;
+    }
+    to {
+        right: 100%;
+    }
+}
